@@ -1,7 +1,9 @@
-package com.tatar.repos;
+package com.tatar.repos.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.tatar.repos.R;
 
 public class RepositoriesActivity extends AppCompatActivity {
 
