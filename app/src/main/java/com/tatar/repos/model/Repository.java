@@ -25,7 +25,7 @@ public class Repository {
     private RepositoryOwner owner;
     @SerializedName("private")
     @Expose
-    private boolean _private;
+    private boolean isPrivate;
     @SerializedName("html_url")
     @Expose
     private String htmlUrl;
@@ -34,7 +34,7 @@ public class Repository {
     private String description;
     @SerializedName("fork")
     @Expose
-    private boolean fork;
+    private boolean isFork;
     @SerializedName("url")
     @Expose
     private String url;
@@ -146,81 +146,6 @@ public class Repository {
     @SerializedName("deployments_url")
     @Expose
     private String deploymentsUrl;
-    @SerializedName("created_at")
-    @Expose
-    private DateTime createdAt;
-    @SerializedName("updated_at")
-    @Expose
-    private DateTime updatedAt;
-    @SerializedName("pushed_at")
-    @Expose
-    private DateTime pushedAt;
-    @SerializedName("git_url")
-    @Expose
-    private String gitUrl;
-    @SerializedName("ssh_url")
-    @Expose
-    private String sshUrl;
-    @SerializedName("clone_url")
-    @Expose
-    private String cloneUrl;
-    @SerializedName("svn_url")
-    @Expose
-    private String svnUrl;
-    @SerializedName("homepage")
-    @Expose
-    private Object homepage;
-    @SerializedName("size")
-    @Expose
-    private long size;
-    @SerializedName("stargazers_count")
-    @Expose
-    private long stargazersCount;
-    @SerializedName("watchers_count")
-    @Expose
-    private long watchersCount;
-    @SerializedName("language")
-    @Expose
-    private String language;
-    @SerializedName("has_issues")
-    @Expose
-    private boolean hasIssues;
-    @SerializedName("has_downloads")
-    @Expose
-    private boolean hasDownloads;
-    @SerializedName("has_wiki")
-    @Expose
-    private boolean hasWiki;
-    @SerializedName("has_pages")
-    @Expose
-    private boolean hasPages;
-    @SerializedName("forks_count")
-    @Expose
-    private long forksCount;
-    @SerializedName("mirror_url")
-    @Expose
-    private String mirrorUrl;
-    @SerializedName("open_issues_count")
-    @Expose
-    private long openIssuesCount;
-    @SerializedName("forks")
-    @Expose
-    private long forks;
-    @SerializedName("open_issues")
-    @Expose
-    private long openIssues;
-    @SerializedName("watchers")
-    @Expose
-    private long watchers;
-    @SerializedName("default_branch")
-    @Expose
-    private String defaultBranch;
-    @SerializedName("network_count")
-    @Expose
-    private long networkCount;
-    @SerializedName("subscribers_count")
-    @Expose
-    private long subscribersCount;
 
     public long getId() {
         return id;
@@ -254,12 +179,12 @@ public class Repository {
         this.owner = owner;
     }
 
-    public boolean is_private() {
-        return _private;
+    public boolean isPrivate() {
+        return isPrivate;
     }
 
-    public void set_private(boolean _private) {
-        this._private = _private;
+    public void setPrivate(boolean aPrivate) {
+        this.isPrivate = aPrivate;
     }
 
     public String getHtmlUrl() {
@@ -279,11 +204,11 @@ public class Repository {
     }
 
     public boolean isFork() {
-        return fork;
+        return isFork;
     }
 
     public void setFork(boolean fork) {
-        this.fork = fork;
+        this.isFork = fork;
     }
 
     public String getUrl() {
@@ -582,203 +507,4 @@ public class Repository {
         this.deploymentsUrl = deploymentsUrl;
     }
 
-    public DateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(DateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public DateTime getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(DateTime updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    public DateTime getPushedAt() {
-        return pushedAt;
-    }
-
-    public void setPushedAt(DateTime pushedAt) {
-        this.pushedAt = pushedAt;
-    }
-
-    public String getGitUrl() {
-        return gitUrl;
-    }
-
-    public void setGitUrl(String gitUrl) {
-        this.gitUrl = gitUrl;
-    }
-
-    public String getSshUrl() {
-        return sshUrl;
-    }
-
-    public void setSshUrl(String sshUrl) {
-        this.sshUrl = sshUrl;
-    }
-
-    public String getCloneUrl() {
-        return cloneUrl;
-    }
-
-    public void setCloneUrl(String cloneUrl) {
-        this.cloneUrl = cloneUrl;
-    }
-
-    public String getSvnUrl() {
-        return svnUrl;
-    }
-
-    public void setSvnUrl(String svnUrl) {
-        this.svnUrl = svnUrl;
-    }
-
-    public Object getHomepage() {
-        return homepage;
-    }
-
-    public void setHomepage(Object homepage) {
-        this.homepage = homepage;
-    }
-
-    public long getSize() {
-        return size;
-    }
-
-    public void setSize(long size) {
-        this.size = size;
-    }
-
-    public long getStargazersCount() {
-        return stargazersCount;
-    }
-
-    public void setStargazersCount(long stargazersCount) {
-        this.stargazersCount = stargazersCount;
-    }
-
-    public long getWatchersCount() {
-        return watchersCount;
-    }
-
-    public void setWatchersCount(long watchersCount) {
-        this.watchersCount = watchersCount;
-    }
-
-    public String getLanguage() {
-        return language;
-    }
-
-    public void setLanguage(String language) {
-        this.language = language;
-    }
-
-    public boolean isHasIssues() {
-        return hasIssues;
-    }
-
-    public void setHasIssues(boolean hasIssues) {
-        this.hasIssues = hasIssues;
-    }
-
-    public boolean isHasDownloads() {
-        return hasDownloads;
-    }
-
-    public void setHasDownloads(boolean hasDownloads) {
-        this.hasDownloads = hasDownloads;
-    }
-
-    public boolean isHasWiki() {
-        return hasWiki;
-    }
-
-    public void setHasWiki(boolean hasWiki) {
-        this.hasWiki = hasWiki;
-    }
-
-    public boolean isHasPages() {
-        return hasPages;
-    }
-
-    public void setHasPages(boolean hasPages) {
-        this.hasPages = hasPages;
-    }
-
-    public long getForksCount() {
-        return forksCount;
-    }
-
-    public void setForksCount(long forksCount) {
-        this.forksCount = forksCount;
-    }
-
-    public String getMirrorUrl() {
-        return mirrorUrl;
-    }
-
-    public void setMirrorUrl(String mirrorUrl) {
-        this.mirrorUrl = mirrorUrl;
-    }
-
-    public long getOpenIssuesCount() {
-        return openIssuesCount;
-    }
-
-    public void setOpenIssuesCount(long openIssuesCount) {
-        this.openIssuesCount = openIssuesCount;
-    }
-
-    public long getForks() {
-        return forks;
-    }
-
-    public void setForks(long forks) {
-        this.forks = forks;
-    }
-
-    public long getOpenIssues() {
-        return openIssues;
-    }
-
-    public void setOpenIssues(long openIssues) {
-        this.openIssues = openIssues;
-    }
-
-    public long getWatchers() {
-        return watchers;
-    }
-
-    public void setWatchers(long watchers) {
-        this.watchers = watchers;
-    }
-
-    public String getDefaultBranch() {
-        return defaultBranch;
-    }
-
-    public void setDefaultBranch(String defaultBranch) {
-        this.defaultBranch = defaultBranch;
-    }
-
-    public long getNetworkCount() {
-        return networkCount;
-    }
-
-    public void setNetworkCount(long networkCount) {
-        this.networkCount = networkCount;
-    }
-
-    public long getSubscribersCount() {
-        return subscribersCount;
-    }
-
-    public void setSubscribersCount(long subscribersCount) {
-        this.subscribersCount = subscribersCount;
-    }
 }

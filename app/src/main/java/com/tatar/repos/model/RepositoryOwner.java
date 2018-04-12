@@ -59,7 +59,7 @@ public class RepositoryOwner {
     private String type;
     @SerializedName("site_admin")
     @Expose
-    private boolean siteAdmin;
+    private boolean isSiteAdmin;
 
     public String getLogin() {
         return login;
@@ -190,10 +190,10 @@ public class RepositoryOwner {
     }
 
     public boolean isSiteAdmin() {
-        return siteAdmin;
+        return isSiteAdmin;
     }
 
     public void setSiteAdmin(boolean siteAdmin) {
-        this.siteAdmin = siteAdmin;
+        this.isSiteAdmin = siteAdmin;
     }
 }
