@@ -7,6 +7,8 @@ import com.tatar.repos.di.component.AppComponent;
 import com.tatar.repos.di.component.DaggerAppComponent;
 import com.tatar.repos.di.module.ContextModule;
 
+import timber.log.Timber;
+
 /**
  * Created by mobile on 13.04.2018.
  */
@@ -26,6 +28,8 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        Timber.plant(new Timber.DebugTree());
 
         component = DaggerAppComponent.builder()
                 .contextModule(new ContextModule(this))

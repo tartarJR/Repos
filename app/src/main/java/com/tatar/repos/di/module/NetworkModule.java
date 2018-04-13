@@ -11,6 +11,7 @@ import dagger.Provides;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
+import timber.log.Timber;
 
 /**
  * Created by mobile on 13.04.2018.
@@ -34,7 +35,7 @@ public class NetworkModule {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
             @Override
             public void log(String message) {
-                // TODO add timber
+                Timber.i(message);
             }
         });
 
