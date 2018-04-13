@@ -21,8 +21,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ServiceModule {
 
     @Provides
-    public Service githubService(Retrofit gitHubRetrofit) {
-        return gitHubRetrofit.create(Service.class);
+    public Service service(Retrofit retrofit) {
+        return retrofit.create(Service.class);
     }
 
     @Provides

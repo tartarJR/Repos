@@ -17,6 +17,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 @Module(includes = ContextModule.class)
 public class NetworkModule {
 
+    @Provides
     public OkHttpClient okHttpClient(HttpLoggingInterceptor loggingInterceptor, Cache cache) {
         return new OkHttpClient.Builder()
                 .addInterceptor(loggingInterceptor)
@@ -24,6 +25,7 @@ public class NetworkModule {
                 .build();
     }
 
+    @Provides
     public HttpLoggingInterceptor loggingInterceptor() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
             @Override
