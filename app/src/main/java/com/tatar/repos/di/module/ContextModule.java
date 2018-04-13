@@ -2,6 +2,8 @@ package com.tatar.repos.di.module;
 
 import android.content.Context;
 
+import com.tatar.repos.di.scope.AppScope;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -19,6 +21,7 @@ public class ContextModule {
     }
 
     @Provides
+    @AppScope
     public Context context() {
         return context;
     }

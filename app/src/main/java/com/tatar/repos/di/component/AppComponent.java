@@ -3,6 +3,7 @@ package com.tatar.repos.di.component;
 import com.squareup.picasso.Picasso;
 import com.tatar.repos.di.module.PicassoModule;
 import com.tatar.repos.di.module.ServiceModule;
+import com.tatar.repos.di.scope.AppScope;
 import com.tatar.repos.network.Service;
 
 import dagger.Component;
@@ -12,6 +13,7 @@ import dagger.Component;
  */
 
 @Component(modules = {ServiceModule.class, PicassoModule.class})
+@AppScope
 public interface AppComponent {
 
     Service service();

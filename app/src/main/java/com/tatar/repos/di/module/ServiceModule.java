@@ -3,6 +3,7 @@ package com.tatar.repos.di.module;
 import com.fatboyindustrial.gsonjodatime.DateTimeConverter;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.tatar.repos.di.scope.AppScope;
 import com.tatar.repos.network.Service;
 
 import org.joda.time.DateTime;
@@ -21,11 +22,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ServiceModule {
 
     @Provides
+    @AppScope
     public Service service(Retrofit retrofit) {
         return retrofit.create(Service.class);
     }
 
     @Provides
+    @AppScope
     public Retrofit retrofit(OkHttpClient okHttpClient, Gson gson) {
         return new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create(gson))
@@ -35,6 +38,7 @@ public class ServiceModule {
     }
 
     @Provides
+    @AppScope
     public Gson gson() {
         GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.registerTypeAdapter(DateTime.class, new DateTimeConverter());
